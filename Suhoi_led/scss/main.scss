@@ -1,0 +1,310 @@
+//IMPORT 
+@import "variables";
+@import "mixins";
+
+//GENERAL STYLING ----------------------------------------------------------------------
+* {
+    @include mp;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    @include mp;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    // position: fixed;
+    background-color: $bgColor;
+    font-size: $fSize;
+    font-family: $font;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+.container {
+    max-width: $mWidth;
+    padding: 0 auto;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.float-clearing {
+    zoom: 1;
+}
+
+.float-clearing:after {
+    zoom: 1;
+    content: " ";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    margin-top: 20.3px;
+}
+
+input {
+    padding-left: 22.5px;
+    @include inputs (403px, 45px, $border1, 5px, $tColor4, 1em, $wColor, 0);
+}
+
+button {
+    float: right;
+    @include inputs (404px, 90px, $border1, 0, $wColor, 1.5em, $btnColor, 700);
+}
+
+/* GRIDVIEW ------------------------------------------------------------*/
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    // border: 1px solid red;
+}
+
+//GENERAL STYLING END ----------------------------------------------------------------------
+//HEADER ----------------------------------------------------------------------
+#main-nav {
+    width: 33%;
+
+    #main-ul {
+        float: right;
+
+        li {
+            margin-top: 20px;
+
+            a {
+                @include link($border);
+                color: $mainColor;
+                padding-top: 34px;
+            }
+        }
+    }
+}
+
+
+#call {
+    margin-top: -125px;
+    width: 66%;
+    float: right;
+
+    li {
+        margin-left: 300px;
+
+        img {
+            padding-right: 12px;
+        }
+    }
+
+    ul {
+        margin-top: -28px;
+        float: right;
+
+        li {
+            padding-bottom: 11.27px;
+
+            img {
+                padding-right: 12px;
+            }
+        }
+    }
+}
+
+//HEADER END----------------------------------------------------------------------
+#back1 {
+    margin-top: 35px;
+    margin-left: -580px;
+
+}
+
+//MAIN CONTENT----------------------------------------------------------------------
+#main-content {
+    margin-top: -140px;
+}
+
+#fifty1 {
+
+    h1 {
+        @include heading(3.5em, $tColor2, 700, uppercase, 11.27px);
+    }
+
+    h3 {
+        @include heading(1.25em, $tColor1, 500, none, 17px);
+        max-width: 600px;
+    }
+
+    h2 {
+        @include heading(2.5em, $tColor2, 700, none, 26px);
+    }
+
+    h4 {
+        @include heading(1em, $tColor3, 400, none, 10px);
+    }
+
+    p {
+        @include heading(0.9em, $tColor2);
+    }
+}
+
+#using {
+    div {
+        max-width: 295px;
+        margin-bottom: 50px;
+
+        p {
+            max-width: 200px;
+            float: right;
+        }
+    }
+
+    #using-right {
+        float: right;
+        margin-top: -270px;
+
+        p {
+            padding-left: 45px;
+        }
+    }
+}
+
+#fifty2 {
+    #ice {
+        margin-top: -450px;
+        width: 69%;
+        margin-left: 150px;
+    }
+
+    #led1 {
+        @include slide(1);
+        // transition: all .5s;
+    }
+
+    #led2 {
+        @include slide(0);
+        // transition: all .5s;
+    }
+
+    #led3 {
+        @include slide(-1);
+        // transition: all .5s;
+    }
+
+    #led4 {
+        @include slide(-2);
+    }
+
+    #led1,
+    #led2,
+    #led3,
+    #led4 {
+        img {
+            width: 170%;
+            margin-left: 800px;
+            margin-top: -500px;
+        }
+    }
+}
+
+#back {
+    width: 35%;
+    float: right;
+    @include slide(-3);
+}
+
+
+
+// #nex {
+    //     height: 30px;
+    //     width: 100px;
+    //     border: 2px solid gray;
+    //     font-family: arial;
+    //     font-size: 15px;
+    //     color: gray;
+    //     text-align: center;
+    //     line-height: 30px;
+    //     position: absolute;
+    //     top: 50%;
+    //     right: 20%;
+    // }
+
+    // #nex:hover {
+    //     cursor: pointer;
+    // }
+
+//MAIN CONTENT END----------------------------------------------------------------------
+
+//BOOTOM SECTION----------------------------------------------------------------------
+#bottom {
+    background-color: $wColor;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+
+    input {
+        margin-top: 25px;
+    }
+}
+
+.col-45 {
+    width: 30%;
+    margin-right: 7%;
+}

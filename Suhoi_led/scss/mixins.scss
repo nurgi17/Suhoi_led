@@ -1,0 +1,36 @@
+//MIXINS
+@mixin mp {
+    //margin and padding -> 0;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin link ($border) {
+    &:hover {
+        border-top: $border;
+    }
+}
+
+@mixin heading ($fs, $col, $fw: 400, $tTrans: none, $mBot: 0) {
+    font-size: $fs;
+    color: $col;
+    font-weight: $fw;
+    text-transform: $tTrans;
+    margin-bottom: $mBot;
+}
+
+@mixin inputs ($w, $h, $bor, $borR, $col, $fS, $bColor, $fw) {
+    width: $w;
+    height: $h;
+    border: $bor;
+    border-radius: $borR;
+    color: $col;
+    font-size: $fS;
+    background-color: $bColor;
+    font-weight: $fw;
+}
+
+@mixin slide ($index) {
+    position: relative;
+    z-index: $index;
+}
